@@ -1,0 +1,38 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ApplicationAccessLogs {
+    private WebDriver driver;
+
+    public ApplicationAccessLogs(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void navigateToPage() {
+        driver.get("https://apexq.fdic.gov/apex/f?p=911:10010:3043243330642:::::&tz=-6:00");
+        driver.manage().window().setSize(new Dimension(1552, 840));
+    }
+
+    public void clickById(String id) {
+        driver.findElement(By.id(id)).click();
+    }
+
+    public void clickByLinkText(String linkText) {
+        driver.findElement(By.linkText(linkText)).click();
+    }
+
+    public void clickByCssSelector(String selector) {
+        driver.findElement(By.cssSelector(selector)).click();
+    }
+
+    public void selectDropdownOption(String dropdownId, String optionValue) {
+        WebElement dropdown = driver.findElement(By.id(dropdownId));
+        dropdown.findElement(By.xpath("//option[. = '" + optionValue + "']")).click();
+    }
+
+    public void closeBrowser() {
+        driver.close();
+    }
+}
