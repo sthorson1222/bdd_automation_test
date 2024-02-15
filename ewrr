@@ -1,0 +1,87 @@
+package testautomation.awsm;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ReportsPage_ApplicationAccessLogs {
+	
+	WebDriver driver;
+	
+	
+	  @Test
+	  public void reportsPageApplicationAccessLog() {
+	    // Test name: ReportsPage_ApplicationAccessLog
+	    // Step # | name | target | value | comment
+	    // 1 | open | https://apexq.fdic.gov/apex/f?p=911:10010:3043243330642:::::&tz=-6:00 |  | 
+	    driver.get("https://apexq.fdic.gov/apex/f?p=911:10010:3043243330642:::::&tz=-6:00");
+	    // 2 | setWindowSize | 1552x840 |  | 
+	    driver.manage().window().setSize(new Dimension(1552, 840));
+	    // 3 | click | id=B1156001730250484216 |  | 
+	    driver.findElement(By.id("B1156001730250484216")).click();
+	    // 4 | click | id=1_menubar_1i |  | 
+	    driver.findElement(By.id("1_menubar_1i")).click();
+	    // 5 | click | linkText=Application Name |  | 
+	    driver.findElement(By.linkText("Application Name")).click();
+	    // 6 | click | css=#R1702416828355680327_sort_widget_action_up > .a-Button |  | 
+	    driver.findElement(By.cssSelector("#R1702416828355680327_sort_widget_action_up > .a-Button")).click();
+	    // 7 | click | linkText=Application Name |  | 
+	    driver.findElement(By.linkText("Application Name")).click();
+	    // 8 | click | css=#R1702416828355680327_sort_widget_action_down > .a-Button |  | 
+	    driver.findElement(By.cssSelector("#R1702416828355680327_sort_widget_action_down > .a-Button")).click();
+	    // 9 | click | linkText=User Name |  | 
+	    driver.findElement(By.linkText("User Name")).click();
+	    // 10 | click | css=.is-active:nth-child(1) |  | 
+	    driver.findElement(By.cssSelector(".is-active:nth-child(1)")).click();
+	    // 11 | click | linkText=User Name |  | 
+	    driver.findElement(By.linkText("User Name")).click();
+	    // 12 | click | css=#R1702416828355680327_sort_widget_action_down > .a-Button |  | 
+	    driver.findElement(By.cssSelector("#R1702416828355680327_sort_widget_action_down > .a-Button")).click();
+	    // 13 | click | linkText=Access Date [EST] |  | 
+	    driver.findElement(By.linkText("Access Date [EST]")).click();
+	    // 14 | click | css=.is-active:nth-child(1) |  | 
+	    driver.findElement(By.cssSelector(".is-active:nth-child(1)")).click();
+	    // 15 | click | linkText=Access Date [EST] |  | 
+	    driver.findElement(By.linkText("Access Date [EST]")).click();
+	    // 16 | click | css=#R1702416828355680327_sort_widget_action_down > .a-Button |  | 
+	    driver.findElement(By.cssSelector("#R1702416828355680327_sort_widget_action_down > .a-Button")).click();
+	    // 17 | click | linkText=Authentication Result |  | 
+	    driver.findElement(By.linkText("Authentication Result")).click();
+	    // 18 | click | css=.is-active:nth-child(1) |  | 
+	    driver.findElement(By.cssSelector(".is-active:nth-child(1)")).click();
+	    // 19 | click | linkText=Authentication Result |  | 
+	    driver.findElement(By.linkText("Authentication Result")).click();
+	    // 20 | click | css=#R1702416828355680327_sort_widget_action_down > .a-Button |  | 
+	    driver.findElement(By.cssSelector("#R1702416828355680327_sort_widget_action_down > .a-Button")).click();
+	    // 21 | click | id=R1702416828355680327_row_select |  | 
+	    driver.findElement(By.id("R1702416828355680327_row_select")).click();
+	    // 22 | select | id=R1702416828355680327_row_select | label=50 | 
+	    {
+	      WebElement dropdown = driver.findElement(By.id("R1702416828355680327_row_select"));
+	      dropdown.findElement(By.xpath("//option[. = '50']")).click();
+	    }
+	    // 23 | click | css=#R1702416828355680327_data_panel .a-IRR-pagination-label |  | 
+	    driver.findElement(By.cssSelector("#R1702416828355680327_data_panel .a-IRR-pagination-label")).click();
+	    // 24 | click | id=R1702416828355680327_row_select |  | 
+	    driver.findElement(By.id("R1702416828355680327_row_select")).click();
+	    // 25 | select | id=R1702416828355680327_row_select | label=100 | 
+	    {
+	      WebElement dropdown = driver.findElement(By.id("R1702416828355680327_row_select"));
+	      dropdown.findElement(By.xpath("//option[. = '100']")).click();
+	    }
+	    // 26 | click | id=R1702416828355680327_row_select |  | 
+	    driver.findElement(By.id("R1702416828355680327_row_select")).click();
+	    // 27 | select | id=R1702416828355680327_row_select | label=1000 | 
+	    {
+	      WebElement dropdown = driver.findElement(By.id("R1702416828355680327_row_select"));
+	      dropdown.findElement(By.xpath("//option[. = '1000']")).click();
+	    }
+	    // 28 | click | id=R1702416828355680327_toolbar_controls |  | 
+	    driver.findElement(By.id("R1702416828355680327_toolbar_controls")).click();
+	    // 29 | close |  |  | 
+	    driver.close();
+	  }
+
+}
