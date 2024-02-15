@@ -1,0 +1,39 @@
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.junit.Test;
+
+public class HomePageTest {
+
+    @Test
+    public void testHomePage() {
+        WebDriver driver = new ChromeDriver();
+        HomePage homePage = new HomePage(driver);
+
+        homePage.navigateToHomePage();
+        homePage.clickButtonById("B1156001730250484216");
+        homePage.clickElementByCssSelector("#R1698111923875969373 > .t-Region-header > .t-Region-headerItems--title");
+        homePage.clickElementByCssSelector(".t-Button--navBar");
+        homePage.clickElementByCssSelector("#report_R1698111923875969373");
+
+        // Verify username
+        assertThat(homePage.getTextByCssSelector(".t-Button--navBar"), is("sthorson"));
+
+        homePage.clickElementByCssSelector("#R1698111923875969373 > .t-Region-header > .t-Region-headerItems--title");
+        // Verify Application & Active Users heading
+        assertThat(homePage.getTextByCssSelector("#R1698111923875969373_heading > b"), is("Application & Active Users"));
+
+        homePage.clickElementByCssSelector("#report_R1698131933823615602 tr:nth-child(1) > .t-Report-cell");
+        homePage.clickElementByCssSelector("#R1698131933823615602 .t-Region-headerItems--title");
+        // Verify Users created in last 30 days heading
+        assertThat(homePage.getTextByCssSelector("#R1698131933823615602_heading > b"), is("Users created in last 30 days"));
+
+        homePage.clickElementByCssSelector("#R1698131344081609159 .t-Region-headerItems--title");
+        homePage.clickElementByCssSelector("#R1698131344081609159 .t-Region-body");
+        // Verify Top Applications by Activity heading
+        assertThat(homePage.getTextByCssSelector("#R1698131344081609159_heading > b"), is("Top Applications by Activity"));
+
+        homePage.closeBrowser();
+    }
+}
