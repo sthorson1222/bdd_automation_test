@@ -1,0 +1,20 @@
+Feature: Verify HomePage Functionalities
+
+  Scenario: User navigates and verifies elements on the HomePage
+    Given the user opens the browser and navigates to "https://apexq.fdic.gov/apex/f?p=911:10010:14913122144989:::::&tz=-6:00"
+    And the browser window is set to 1552 width and 840 height
+    When the user clicks on the button with id "B1156001730250484216"
+    And the user clicks on the region header title in "R1698111923875969373"
+    And the user clicks on the navigation bar button
+    And the user clicks on the report in "R1698111923875969373"
+    Then the navigation bar button text should be "sthorson"
+    When the user clicks on the region header title in "R1698111923875969373"
+    Then the heading of "R1698111923875969373" should be "Application & Active Users"
+    When the user clicks on the first cell in the report "R1698131933823615602"
+    And the user clicks on the region header title in "R1698131933823615602"
+    Then the heading of "R1698131933823615602" should be "Users created in last 30 days"
+    When the user clicks on the region header title in "R1698131344081609159"
+    And the user clicks in the body of "R1698131344081609159"
+    Then the heading of "R1698131344081609159" should be "Top Applications by Activity"
+    When the user clicks on the region header title in "R1698131344081609159"
+    And the user closes the browser
