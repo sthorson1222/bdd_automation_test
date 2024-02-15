@@ -1,0 +1,20 @@
+Feature: Reports Page User Lock Status Log Interaction
+
+  Scenario: User filters and exports the User Lock Status Log
+    Given the user navigates to the user lock status log page at "https://apexq.fdic.gov/apex/f?p=911:10010:16141979937523:::::&tz=-6:00"
+    And the browser window is set to 1552 width and 840 height
+    When the user clicks on button with id "B1156001730250484216"
+    And the user clicks on the menu item with id "1_menubar_1i"
+    And the user clicks on the tab in "R1703982228259828361"
+    And the user clicks on the actions button in "R1703982228259828361"
+    And the user selects the filter action from the actions menu
+    And the user clicks on the filter type selector
+    And the user selects "Application Name" from the column name dropdown
+    And the user clicks on the expression field
+    And the user opens the expression search
+    And the user selects "AWSM" from the search results
+    And the user confirms the filter criteria
+    And the user clicks on the actions button in "R1703982228259828361"
+    And the user selects the export action from the actions menu
+    And the user confirms the export action
+    Then the user closes the browser
