@@ -1,0 +1,33 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class HomePage {
+    private WebDriver driver;
+
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void navigateToHomePage() {
+        driver.get("https://apexq.fdic.gov/apex/f?p=911:10010:14913122144989:::::&tz=-6:00");
+        driver.manage().window().setSize(new Dimension(1552, 840));
+    }
+
+    public void clickButtonById(String id) {
+        driver.findElement(By.id(id)).click();
+    }
+
+    public void clickElementByCssSelector(String cssSelector) {
+        driver.findElement(By.cssSelector(cssSelector)).click();
+    }
+
+    public String getTextByCssSelector(String cssSelector) {
+        return driver.findElement(By.cssSelector(cssSelector)).getText();
+    }
+
+    public void closeBrowser() {
+        driver.close();
+    }
+}
