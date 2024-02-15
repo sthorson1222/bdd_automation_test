@@ -1,0 +1,23 @@
+Feature: Access and interact with the Reports Page Application Logs
+
+  Scenario: Successfully interact with application access logs
+    Given I open the browser and navigate to the reports page
+    And I set the window size to 1552 width and 840 height
+    When I click on the "B1156001730250484216" button
+    And I select "Application Name" from the menu
+    And I sort the application names in ascending order
+    And I sort the application names in descending order
+    And I select "User Name" from the menu
+    And I sort the user names in ascending order
+    And I sort the user names in descending order
+    And I select "Access Date [EST]" from the menu
+    And I sort the access dates in ascending order
+    And I sort the access dates in descending order
+    And I select "Authentication Result" from the menu
+    And I sort the authentication results in ascending order
+    And I sort the authentication results in descending order
+    And I change the rows displayed to 50
+    And I change the rows displayed to 100
+    And I change the rows displayed to 1000
+    Then I close the browser
+
