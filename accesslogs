@@ -1,0 +1,23 @@
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ApplicationAccessLogsTest {
+
+    @Test
+    public void testApplicationAccessLogs() {
+        WebDriver driver = new ChromeDriver();
+        ApplicationAccessLogs applicationAccessLogs = new ApplicationAccessLogs(driver);
+
+        applicationAccessLogs.navigateToPage();
+        applicationAccessLogs.clickById("B1156001730250484216");
+        applicationAccessLogs.clickById("1_menubar_1i");
+        applicationAccessLogs.clickByLinkText("Application Name");
+        applicationAccessLogs.clickByCssSelector("#R1702416828355680327_sort_widget_action_up > .a-Button");
+        applicationAccessLogs.clickByLinkText("Application Name");
+        applicationAccessLogs.clickByCssSelector("#R1702416828355680327_sort_widget_action_down > .a-Button");
+        // Repeat for other actions as per the original test steps
+
+        applicationAccessLogs.closeBrowser();
+    }
+}
