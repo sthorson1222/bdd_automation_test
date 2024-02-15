@@ -1,0 +1,55 @@
+Feature: User Activity Logs Interaction
+
+  Scenario: Filter and view User Activity Logs
+    Given the user is on the User Activity Logs page
+    When the user navigates through the interface to apply various filters
+    And searches for specific keywords like "awsm" and "sthorson"
+    Then the user verifies the filters and search operations are applied correctly
+    And the user closes the browser
+
+
+Feature: Search for Users on Reports Page
+
+  Scenario: User searches and verifies the search result
+    Given the user is on the Reports Page for user search
+    When the user sets the browser window size to 1936 by 945
+    And performs a search for "sthorson"
+    Then the search result should correctly show "sthorson"
+    And the user logs out and closes the browser
+
+
+Feature: Filter Applications Managed by AWSM
+
+  Scenario: Search and filter applications managed by AWSM
+    Given the user is on the specific Application Management page
+    When the user sets the browser window size to 1936 by 945
+    And navigates through the menu to the application list
+    And filters the list for "AWSM"
+    Then the user closes the browser
+
+Feature: Reports Page User Lock Status Log Filtering
+
+  Scenario: Filter and interact with User Lock Status Log
+    Given the user is on the User Lock Status Log page
+    When the user sets the browser window size to 1552 by 840
+    And clicks on specific elements to navigate to the lock status log
+    And selects "Application Name" from a dropdown
+    And selects "AWSM" from an expression list
+    And performs actions to filter and possibly export the log
+    Then the user closes the browser
+
+
+Feature: Reports Page Application Access Log Interaction
+
+  Scenario: Interact with Application Access Logs
+    Given the user is on the Application Access Log page
+    When the user sets the browser window size to 1552 by 840
+    And clicks on button with ID "B1156001730250484216"
+    And selects "Application Name" from the menu
+    And sorts the "Application Name" column in ascending and then descending order
+    And sorts the "User Name" column in ascending and then descending order
+    And sorts the "Access Date [EST]" column in ascending and then descending order
+    And sorts the "Authentication Result" column in ascending and then descending order
+    And changes the row display to "50", then "100", and finally "1000"
+    And interacts with the toolbar controls
+    Then the user closes the browser
