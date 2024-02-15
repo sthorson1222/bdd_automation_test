@@ -1,0 +1,36 @@
+package gov.fdic;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class DriverManager {
+    
+    private static WebDriver driver;
+
+    public static WebDriver getDriver() {
+        if (driver == null) {
+            // Set the path to the chromedriver executable
+            // System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+
+            // Or ensure chromedriver is available in your system's PATH
+
+            ChromeOptions options = new ChromeOptions();
+            // Add any ChromeOptions you need
+            options.addArgumaents("--start-maximized"); // start maximized
+            options.addArguments("--ignore-certificate-errors"); // ignore certificate errors
+            options.addArguments("--disable-popup-blocking"); // disable popup blocking
+            // options.addArguments("--headless"); // for running tests in headless mode
+
+            driver = new ChromeDriver(options);
+        }
+        return driver;
+    }
+
+    public static void closeDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
+    }
+}
