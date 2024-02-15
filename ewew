@@ -1,0 +1,11 @@
+Slide Content: Exporting Selenium IDE Test Cases
+Process & Tools:
+
+Exporting Test Cases: Transitioned from Selenium IDE to a code-based testing framework.
+Java & Selenium WebDriver: Leveraged Java for scripting and Selenium WebDriver for browser interactions, ensuring dynamic and robust automation capabilities.
+JUnit Integration: Incorporated JUnit for assertions and test management, enhancing the reliability and readability of test outcomes.
+Benefits:
+
+Efficiency & Scalability: Streamlined test creation and execution process, allowing for scalable testing solutions.
+Enhanced Test Maintenance: Facilitated easier updates and maintenance of test scripts, adapting quickly to application changes.
+Collaborative Workflow: Enabled seamless integration into our code repository, fostering collaboration across development and QA teams.
