@@ -1,0 +1,29 @@
+Feature: Reports Page Application Access Log Interaction
+
+  Scenario: User sorts and changes the number of rows displayed in the Application Access Log
+    Given the user navigates to the reports page at "https://apexq.fdic.gov/apex/f?p=911:10010:3043243330642:::::&tz=-6:00"
+    And the browser window is set to 1552 width and 840 height
+    When the user clicks on button with id "B1156001730250484216"
+    And the user clicks on the menu item with id "1_menubar_1i"
+    And the user clicks on the link text "Application Name"
+    And the user sorts the column "Application Name" in ascending order
+    And the user clicks on the link text "Application Name" again
+    And the user sorts the column "Application Name" in descending order
+    And the user clicks on the link text "User Name"
+    And the user selects the first active option under "User Name"
+    And the user clicks on the link text "User Name" again
+    And the user sorts the column "User Name" in descending order
+    And the user clicks on the link text "Access Date [EST]"
+    And the user selects the first active option under "Access Date [EST]"
+    And the user clicks on the link text "Access Date [EST]" again
+    And the user sorts the column "Access Date [EST]" in descending order
+    And the user clicks on the link text "Authentication Result"
+    And the user selects the first active option under "Authentication Result"
+    And the user clicks on the link text "Authentication Result" again
+    And the user sorts the column "Authentication Result" in descending order
+    And the user selects the row display option "50"
+    And the user navigates to the next page of results
+    And the user selects the row display option "100"
+    And the user selects the row display option "1000"
+    And the user interacts with the toolbar controls
+    Then the user closes the browser
