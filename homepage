@@ -1,0 +1,38 @@
+sdsdsd
+
+package gov.fdic;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+
+
+public class HomePage {
+
+
+
+
+   private static WebDriver driver;
+    
+    @BeforeClass
+    public static void setUp() {
+        // Initialize the driver from DriverManager
+        driver = DriverManager.getDrivaer();
+    }
+
+    @Test
+    public void openHomePage() throws InterruptedException {
+        // Replace "http://www.yourhomepage.com" with your actual homepage URL
+        driver.get("http://www.google.com");
+       
+
+        // Here you can add assertions or interactions with the page
+    }
+
+//    @AfterClass
+//    public static void tearDown() {
+//        // Close the browser and clean up after test execution
+//        DriverManager.closeDriver();
+//    }
+}
