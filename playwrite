@@ -1,0 +1,19 @@
+<plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>exec-maven-plugin</artifactId>
+    <version>3.0.0</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>java</goal>
+            </goals>
+            <phase>test-compile</phase>
+            <configuration>
+                <mainClass>com.microsoft.playwright.CLI</mainClass>
+                <arguments>
+                    <argument>install</argument>
+                </arguments>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
